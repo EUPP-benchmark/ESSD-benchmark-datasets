@@ -1,0 +1,5 @@
+*.npy
+*.nc
+*.txt
+.ipynb_checkpoints
+__pycache__
