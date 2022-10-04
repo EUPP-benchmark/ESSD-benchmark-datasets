@@ -18,7 +18,7 @@ And you are ready to use the notebooks.
 
 In a terminal, launch the Jupyter notebook server:
 
-  jupyter-notebook
+    jupyter-notebook
 
 This will lead you to your favorite browser where you will be able to launch the notebooks. 
 You can first extract the ESSD dataset by running the `extract_*.ipynb` scripts, and then test the resulting netCDF files by running 
