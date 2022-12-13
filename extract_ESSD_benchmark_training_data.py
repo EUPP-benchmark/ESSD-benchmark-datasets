@@ -30,7 +30,7 @@ import matplotlib.pyplot as plt
 # In[ ]:
 
 
-countries = ['france', 'austria', 'netherlands', 'germany']  # Switzerland will not be available online, Belgium soon
+countries = ['france', 'austria', 'netherlands', 'germany', 'belgium']  # Switzerland will not be available online, Belgium soon
 
 
 # ## Extracting the countries t2m data
