@@ -1,5 +1,7 @@
 # ESSD-benchmark-datasets
-Code used to create the ESSD benchmark datasets netCDF files from the hacky phase zarr datasets available online.
+Script to download and create the ESSD benchmark dataset netCDF files from the EUMETNET [EUPPBench dataset](https://eupp-benchmark.github.io/EUPPBench-doc/files/EUPP_datasets.html) available online.
+
+This dataset include 2 meter temperature forecasts and observations, and is composed of a training part (composed of reforecasts) and a test part (composed of forecasts). The stations of Belgium, France, Germany, Austria and the Netherlands are included.
 
 ## Installation
 
@@ -10,17 +12,16 @@ First clone the repository:
 Then you can create the [Anaconda](https://www.anaconda.com/) environment:
 
     conda env create -f environment.yml
-    conda activate ESSD-benchmark-datasets
 
-And you are ready to use the notebooks.
+And you are ready to download the data.
 
-## Usage
+## Getting the dataset
 
-In a terminal, launch the Jupyter notebook server:
+If you have `bash`, then in a terminal, run the following command:
 
-    jupyter-notebook
+    bash -i download_ESSD_dataset.sh
 
-This will lead you to your favorite browser where you will be able to launch the notebooks. 
-You can first extract the ESSD dataset by running the `extract_*.ipynb` scripts, and then test the resulting netCDF files by running 
-the `test_*.ipynb` files.
+This will download first the test data forecasts and observations, and then the training data forecasts and observations. All these data are downloaded as NetCDF files (with a `.nc` extension).
+
+If you do not have `bash`, then you can simply run **in the same order** the commands inside the script `download_ESSD_dataset.sh` manually in a terminal.
 
