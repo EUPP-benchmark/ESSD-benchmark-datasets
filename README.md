@@ -3,6 +3,8 @@ Script to download and create the ESSD benchmark dataset netCDF files from the E
 
 This dataset include 2 meter temperature forecasts and observations, and is composed of a training part (composed of reforecasts) and a test part (composed of forecasts). The stations of Belgium, France, Germany, Austria and the Netherlands are included.
 
+The station data of Switzerland are restricted and must be ... TODO
+
 ## Installation
 
 First clone the repository:
