@@ -3,7 +3,13 @@ Script to download and create the ESSD benchmark dataset netCDF files from the E
 
 This dataset include 2 meter temperature forecasts and observations, and is composed of a training part (composed of reforecasts) and a test part (composed of forecasts). The stations of Belgium, France, Germany, Austria and the Netherlands are included.
 
-The station data of Switzerland are restricted and must be ... TODO
+The station data of Switzerland are restricted and must be obtained from [IDAWEB](https://gate.meteoswiss.ch/idaweb/) at MeteoSwiss, as we are not entitled to provide it online. Registration with IDAWEB can be initiated here: https://gate.meteoswiss.ch/idaweb/prepareRegistration.do . For more information, please also read https://gate.meteoswiss.ch/idaweb/more.do?language=en .
+
+This code is provided as supplementary material with:
+
+* Demaeyer, J., Bhend, J., Lerch, S., Primo, C., Van Schaeybroeck, B., Atencia, A., Ben Bouallègue, Z., Chen, J., Dabernig, M., Evans, G., Faganeli Pucer, J., Hooper, B., Horat, N., Jobst, D., Merše, J., Mlakar, P., Möller, A., Mestre, O., Taillardat, M., and Vannitsem, S.: The EUPPBench postprocessing benchmark dataset v1.0, Earth Syst. Sci. Data Discuss. [preprint], https://doi.org/10.5194/essd-2022-465, in review, 2023.
+
+**Please cite this article if you use (a part of) this code for a publication.**
 
 ## Installation
 
