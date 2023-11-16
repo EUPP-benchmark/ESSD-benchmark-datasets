@@ -47,8 +47,8 @@ land_usage_legend = None
 model_altitude_source = None
 
 for country in countries:
-    target_fcs = fsspec.get_mapper(" https://object-store.os-api.cci1.ecmwf.int/eumetnet-postprocessing-benchmark-1st-phase-training-dataset/data/stations_data/stations_ensemble_reforecasts_surface_" + country + ".zarr")
-    target_obs = fsspec.get_mapper(" https://object-store.os-api.cci1.ecmwf.int/eumetnet-postprocessing-benchmark-1st-phase-training-dataset/data/stations_data/stations_reforecasts_observations_surface_" + country + ".zarr")
+    target_fcs = fsspec.get_mapper("https://object-store.os-api.cci1.ecmwf.int/eumetnet-postprocessing-benchmark-1st-phase-training-dataset/data/stations_data/stations_ensemble_reforecasts_surface_" + country + ".zarr")
+    target_obs = fsspec.get_mapper("https://object-store.os-api.cci1.ecmwf.int/eumetnet-postprocessing-benchmark-1st-phase-training-dataset/data/stations_data/stations_reforecasts_observations_surface_" + country + ".zarr")
     
     fcs = xr.open_zarr(target_fcs)
     
