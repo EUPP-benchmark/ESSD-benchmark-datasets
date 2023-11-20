@@ -12,12 +12,6 @@ import xarray as xr
 # In[ ]:
 
 
-import fsspec
-
-
-# In[ ]:
-
-
 import numpy as np
 
 
@@ -25,6 +19,12 @@ import numpy as np
 
 
 import matplotlib.pyplot as plt
+
+
+# In[ ]:
+
+
+import climetlab as cml
 
 
 # In[ ]:
@@ -47,17 +47,15 @@ land_usage_legend = None
 model_altitude_source = None
 
 for country in countries:
-    target_fcs = fsspec.get_mapper("https://object-store.os-api.cci1.ecmwf.int/eumetnet-postprocessing-benchmark-1st-phase-training-dataset/data/stations_data/stations_ensemble_forecasts_surface_" + country + ".zarr")
-    target_obs = fsspec.get_mapper("https://object-store.os-api.cci1.ecmwf.int/eumetnet-postprocessing-benchmark-1st-phase-training-dataset/data/stations_data/stations_forecasts_observations_surface_" + country + ".zarr")
-    
-    fcs = xr.open_zarr(target_fcs)
+    ds = cml.load_dataset('EUPPBench-training-data-stations-forecasts-surface', 'ensemble', country)
+    fcs = ds.to_xarray()
     
     model_altitude_source = fcs.attrs['model altitude source']
 
     fcs_t2m.append(fcs.t2m.load())
     fcs.close()
     
-    obs = xr.open_zarr(target_obs)
+    obs = ds.get_observations_as_xarray()
     
     sources_list.append(obs.attrs['source'])
     land_usage_source = obs.attrs['land usage source']
